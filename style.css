@@ -1,0 +1,422 @@
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+
+  body {
+    line-height: 1;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+  }
+
+  blockquote,
+  q {
+    quotes: none;
+  }
+
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  body {
+    height: 2000px;
+  }
+
+  #pincode-search-button {
+    width: 200px;
+    padding: 20px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  /* Navigation bar */
+  nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  #logo-name {
+    width: 60px;
+    height: 40px;
+    background-image: url('/util/images/logo_image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  #first-half {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #first-half>div {
+    display: flex;
+    align-items: center;
+  }
+
+  #search-bar {
+    margin-top: 8px;
+    order: 1;
+  }
+
+  #restaurant-searchbar {
+    width: 90%;
+    height: 30px;
+    border: 1px solid rgb(221, 220, 220);
+    font-size: 14px;
+    padding-left: 24px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  #user-space {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  #user-space div {
+    padding: 8px 12px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 20px;
+    /* border: 1px solid #ddd; */
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  #user-space div:last-child {
+    background-color: #eae7e7;
+  }
+
+  #menu-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('./util/images/menu.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  /* Sidebar */
+  #side-filter-bar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    /* Hidden initially */
+    width: 210px;
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: left 0.3s ease;
+  }
+
+  #side-filter-bar.show {
+    left: 0;
+    /* Show sidebar */
+  }
+
+  #side-filter-bar h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+  }
+
+  .filter-group {
+    margin-bottom: 15px;
+  }
+
+  .filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .filter-group select,
+  .filter-group input[type="radio"],
+  .filter-group input[type="range"] {
+    margin-bottom: 10px;
+  }
+
+  #apply-filters {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #apply-filters:hover {
+    background-color: #0056b3;
+  }
+
+  #rating-value {
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  #cuisine-filter {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  #cuisine-filter .dropdown-header {
+    padding: 10px;
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  #cuisine-filter .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 10px;
+  }
+  
+  #cuisine-filter .dropdown-menu label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  #cuisine-filter .dropdown-menu input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  #cuisine-filter.open .dropdown-menu {
+    display: block;
+  }
+
+  #home-feed-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  #home-feed-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  #home-feed-item img {
+    width: auto; 
+    height: 150px;
+    object-fit: cover; 
+    border-radius: 8px;
+  }
+
+  #info-section {
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #restaurant_name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #rating {
+    font-size: 14px;
+    color: #f39c12; 
+  }
+  
+  #delivery-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2ecc71;
+  }
+  
+
+  @media screen and (min-width: 769px) {
+    nav {
+      flex-direction: row;
+      height: 60px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #first-half {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+    }
+
+    #logo-name {
+      background-image: url("./util/images/logo.png");
+      margin-left: 10px;
+      width: 150px;
+      height: 40px;
+    }
+
+    #restaurant-searchbar {
+      width: 70%;
+    }
+
+    #menu-icon {
+      display: none;
+    }
+
+    #side-filter-bar {
+      left: 0;
+      width: 16%;
+      top: 60px;
+    }
+  }

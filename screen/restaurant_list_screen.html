@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <nav>
+    <div id="first-half">
+      <div>
+        <div id="menu-icon"></div>
+        <div id="logo-name"></div>
+      </div>
+      <div id="user-space">
+        <div>Sign Up</div>
+        <div>Sign In</div>
+      </div>
+    </div>
+    <div id="search-bar">
+      <input type="search" name="restaurant-searchbar" id="restaurant-searchbar" placeholder="Search Restaurant" />
+    </div>
+  </nav>
+
+  <!-- each restaurant data -->
+  <div id="home-feed-container">
+    <div id="home-feed-item">
+      <img src="https://wallpapers.com/images/hd/brand-pictures-g2x50ziu0hdq1fbu.jpg" alt="pizza-hut">
+      <div id="info-section">
+        <div data-restaurantId="1" id="restaurant_name">Pizza Hut</div>
+        <div id="rating">4.5</div>
+      </div>
+      <div id="delivery-price">100</div>
+    </div>
+    <div id="home-feed-item">
+      <img src="https://wallpapers.com/images/hd/brand-pictures-g2x50ziu0hdq1fbu.jpg" alt="pizza-hut">
+      <div id="info-section">
+        <div data-restaurantId="1" id="restaurant_name">Pizza Hut</div>
+        <div id="rating">4.5</div>
+      </div>
+      <div id="delivery-price">100</div>
+    </div>
+    <div id="home-feed-item">
+      <img src="https://wallpapers.com/images/hd/brand-pictures-g2x50ziu0hdq1fbu.jpg" alt="pizza-hut">
+      <div id="info-section">
+        <div data-restaurantId="1" id="restaurant_name">Pizza Hut</div>
+        <div id="rating">4.5</div>
+      </div>
+      <div id="delivery-price">100</div>
+    </div>
+  </div>
+
+  <!-- side filter bar -->
+  <div id="side-filter-bar">
+    <h3>Filter Options</h3>
+    <div class="filter-group">
+      <div id="cuisine-filter" class="dropdown">
+        <div class="dropdown-header">Select Cuisine</div>
+        <div class="dropdown-menu">
+          <label>
+            <input type="checkbox" value="indian"> Indian
+          </label>
+          <label>
+            <input type="checkbox" value="chinese"> Chinese
+          </label>
+          <label>
+            <input type="checkbox" value="italian"> Italian
+          </label>
+          <label>
+            <input type="checkbox" value="all"> All
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="filter-group">
+      <label>Price Range:</label>
+      <input type="radio" id="low" name="price" value="low">
+      <label for="low">Low</label>
+      <input type="radio" id="medium" name="price" value="medium">
+      <label for="medium">Medium</label>
+      <input type="radio" id="high" name="price" value="high">
+      <label for="high">High</label>
+    </div>
+    <div class="filter-group">
+      <label for="rating-filter">Minimum Rating:</label>
+      <input type="range" id="rating-filter" min="1" max="5" step="1">
+      <span id="rating-value">3</span>
+    </div>
+    <button id="apply-filters">Apply Filters</button>
+  </div>
+
+  <script src="/logic/restaurant_list_logic.js"></script>
+</body>
+
+</html>
