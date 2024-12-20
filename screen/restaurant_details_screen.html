@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <nav>
+    <div id="first-half">
+      <div>
+        <div id="logo-name"></div>
+      </div>
+      <div id="user-space">
+        <div>Sign Up</div>
+        <div>Sign In</div>
+      </div>
+    </div>
+  </nav>
+  <div id="info-container">
+    <div id="restaurant-img">
+      <img src="https://wallpapers.com/images/hd/brand-pictures-g2x50ziu0hdq1fbu.jpg" alt="pizza-hut">
+    </div>
+    <div id="restaurant-info">
+      <div id="restaurant-name">Pizza Hut</div>
+      <div id="delivery-time">10-20</div>
+      <div id="tags">Pizza</div>
+      <div id="restaurant-info">
+        <span id="distance">900m.</span>
+        <span id="timing">10-20min.</span>
+        <span id="minimum">100.</span>
+        <span id="delivery-cost">20.</span>
+      </div>
+      <div id="reviews">
+        <span>⭐</span>
+        <div class="review-container">
+          <div id="review-stars">4.5 Excellent</div>
+          <div>See all 500 reviews</div>
+        </div>
+        <div>></div>
+      </div>
+    </div>
+    <div id="menu-filters"></div>
+    <div id="menu-item-containers">
+      <h2>Featured</h2>
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-name">Large CheeseBoard</div>
+          <div class="ingredients">Mozzarella,Goats, Cheese</div>
+          <div class="price">430</div>
+        </div>
+        <div class="item-image">
+          <img src="https://www.bacinos.com/wp-content/uploads/2021/05/Pizza-Hut-Cheese-Pizzas.jpg"
+            alt="large-cheese-board">
+        </div>
+        <div class="action">
+          <div class="add-item">+</div>
+          <div class="remove-item">-</div>
+        </div>
+      </div>
+      <!-- More menu items here -->
+    </div>
+  </div>
+
+  <!-- Bottom Sheet Structure -->
+  <div id="bottom-sheet" class="bottom-sheet">
+    <div class="bottom-sheet-content">
+      <div id="bottom-sheet-image">
+        <img src="" alt="Item Image" id="bottom-sheet-item-image">
+      </div>
+      <div id="bottom-sheet-info">
+        <h3 id="bottom-sheet-item-name"></h3>
+        <p id="bottom-sheet-description"></p>
+        <div id="bottom-sheet-ingredients"></div>
+        <div id="bottom-sheet-extra-ingredients">
+          <label for="extra-ingredients">Extra Ingredients:</label>
+          <select id="extra-ingredients">
+            <option value="0">None</option>
+            <option value="50">Extra Cheese (50)</option>
+            <option value="30">Olives (30)</option>
+          </select>
+        </div>
+        <div id="bottom-sheet-quantity">
+          <button id="increase-quantity">+</button>
+          <span id="quantity">1</span>
+        </div>
+        <button id="submit-button">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/logic/restaurant_details_logic.js"></script>
+</body>
+
+</html>

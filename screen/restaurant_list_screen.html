@@ -27,68 +27,67 @@
 
   <!-- each restaurant data -->
   <div id="home-feed-container">
-    <div id="home-feed-item">
+    <div class="home-feed-item">
       <img src="https://wallpapers.com/images/hd/brand-pictures-g2x50ziu0hdq1fbu.jpg" alt="pizza-hut">
       <div id="info-section">
-        <div data-restaurantId="1" id="restaurant_name">Pizza Hut</div>
-        <div id="rating">4.5</div>
+        <div class="restaurant-details">
+          <div id="restaurant_name">Pizza Hut</div>
+          <div id="rating">4.5 <span>⭐</span></div>
+        </div>
+        <div id="delivery-price">₹100</div>
       </div>
-      <div id="delivery-price">100</div>
     </div>
-    <div id="home-feed-item">
+    <div class="home-feed-item">
       <img src="https://wallpapers.com/images/hd/brand-pictures-g2x50ziu0hdq1fbu.jpg" alt="pizza-hut">
       <div id="info-section">
-        <div data-restaurantId="1" id="restaurant_name">Pizza Hut</div>
-        <div id="rating">4.5</div>
+        <div class="restaurant-details">
+          <div id="restaurant_name">Pizza Hut</div>
+          <div id="rating">4.5 <span>⭐</span></div>
+        </div>
+        <div id="delivery-price">₹100</div>
       </div>
-      <div id="delivery-price">100</div>
     </div>
-    <div id="home-feed-item">
+    <div class="home-feed-item">
       <img src="https://wallpapers.com/images/hd/brand-pictures-g2x50ziu0hdq1fbu.jpg" alt="pizza-hut">
       <div id="info-section">
-        <div data-restaurantId="1" id="restaurant_name">Pizza Hut</div>
-        <div id="rating">4.5</div>
+        <div class="restaurant-details">
+          <div id="restaurant_name">Pizza Hut</div>
+          <div id="rating">4.5 <span>⭐</span></div>
+        </div>
+        <div id="delivery-price">₹100</div>
       </div>
-      <div id="delivery-price">100</div>
     </div>
   </div>
 
   <!-- side filter bar -->
   <div id="side-filter-bar">
-    <h3>Filter Options</h3>
-    <div class="filter-group">
-      <div id="cuisine-filter" class="dropdown">
-        <div class="dropdown-header">Select Cuisine</div>
-        <div class="dropdown-menu">
-          <label>
-            <input type="checkbox" value="indian"> Indian
-          </label>
-          <label>
-            <input type="checkbox" value="chinese"> Chinese
-          </label>
-          <label>
-            <input type="checkbox" value="italian"> Italian
-          </label>
-          <label>
-            <input type="checkbox" value="all"> All
-          </label>
-        </div>
-      </div>
+    <h3>Filters</h3>
+
+    <!-- Cuisine Filters -->
+    <div id="cuisine-filters" class="filter-group">
+      <h4>Choose Cuisine</h4>
+      <label>Italian<input type="checkbox" value="Italian"> </label>
+      <label>Chinese<input type="checkbox" value="Chinese"> </label>
+      <label>Indian<input type="checkbox" value="Indian"> </label>
+      <label>Mexican<input type="checkbox" value="Mexican"> </label>
+      <label>French<input type="checkbox" value="French"> </label>
     </div>
+
+    <!-- Price Range Filters -->
     <div class="filter-group">
-      <label>Price Range:</label>
-      <input type="radio" id="low" name="price" value="low">
-      <label for="low">Low</label>
-      <input type="radio" id="medium" name="price" value="medium">
-      <label for="medium">Medium</label>
-      <input type="radio" id="high" name="price" value="high">
-      <label for="high">High</label>
+      <label for="price-range">Price Range: <span id="price-range-value">50</span></label>
+      <input type="range" id="price-range" min="0" max="100" step="10" value="50">
     </div>
+
+    <!-- Rating Filter -->
     <div class="filter-group">
-      <label for="rating-filter">Minimum Rating:</label>
-      <input type="range" id="rating-filter" min="1" max="5" step="1">
-      <span id="rating-value">3</span>
+      <label>Rating</label>
+      <input type="radio" name="rating" value="5"> 5 Stars<br>
+      <input type="radio" name="rating" value="4"> 4 Stars<br>
+      <input type="radio" name="rating" value="3"> 3 Stars<br>
     </div>
+
+    <!-- Apply Filters Button -->
     <button id="apply-filters">Apply Filters</button>
   </div>
 

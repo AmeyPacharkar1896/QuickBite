@@ -4,26 +4,20 @@ const sidebar = document.querySelector("#side-filter-bar");
 const body = document.querySelector("body");
 
 logoName.addEventListener("click", () => {
-  window.location.href = "././restaurant_list_screen.html"
+  window.location.href = "././restaurant_list_screen.html";
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const menuIcon = document.getElementById("menu-icon");
-  const sidebar = document.getElementById("side-filter-bar");
-  const body = document.body;
-
   const applyFiltersButton = document.getElementById("apply-filters");
-  const ratingFilter = document.getElementById("rating-filter");
-  const ratingValue = document.getElementById("rating-value");
+  const ratingFilter = document.querySelectorAll('input[name="rating"]');
+  const priceRange = document.querySelector("#price-range");
+  const priceRangeValue = document.querySelector("#price-range-value");
 
-  // Handle menu icon click to toggle sidebar
   menuIcon.addEventListener("click", (event) => {
-    console.log("Show sidebar");
     event.stopPropagation();
     sidebar.classList.toggle("show");
   });
 
-  // Close sidebar when clicking outside
   body.addEventListener("click", (event) => {
     if (
       sidebar.classList.contains("show") &&
@@ -38,39 +32,45 @@ document.addEventListener("DOMContentLoaded", () => {
     event.stopPropagation();
   });
 
-  // Update rating value display in real-time
-  ratingFilter.addEventListener("input", (event) => {
-    ratingValue.textContent = event.target.value;
+  priceRange.addEventListener("input", () => {
+    priceRangeValue.textContent = priceRange.value;
   });
 
-  // Apply filters and log selected options
   applyFiltersButton.addEventListener("click", () => {
-    // Get selected cuisines
     const selectedCuisines = Array.from(
-      document.querySelectorAll('#cuisine-filter .dropdown-menu input[type="checkbox"]:checked')
+      document.querySelectorAll('#cuisine-filters input[type="checkbox"]:checked')
     ).map((checkbox) => checkbox.value);
 
-    // Get selected price range
-    const price = document.querySelector('input[name="price"]:checked')?.value || "all";
+    const price = priceRange.value;
 
-    // Get selected rating
-    const rating = ratingFilter.value;
-
-    console.log("Filters Applied:");
-    console.log("Cuisine:", selectedCuisines.length > 0 ? selectedCuisines : "all");
-    console.log("Price Range:", price);
-    console.log("Minimum Rating:", rating);
+    const selectedRating = Array.from(ratingFilter).find(radio => radio.checked)?.value || "all";
 
     alert(
-      `Filters applied:\nCuisine: ${selectedCuisines.length > 0 ? selectedCuisines.join(", ") : "All"}\nPrice: ${price}\nRating: ${rating}`
+      `Filters applied:\nCuisine: ${selectedCuisines.length > 0 ? selectedCuisines.join(", ") : "All"}\nPrice: ${price}\nRating: ${selectedRating}`
     );
 
-    // Close the sidebar after applying filters
     sidebar.classList.remove("show");
   });
 });
 
+document.querySelectorAll('.filter-group').forEach((filterGroup) => {
+  filterGroup.addEventListener('click', function (e) {
+    const filterTitle = e.target.closest('.filter-group').querySelector('label');
+    const dropdownIcon = filterTitle?.querySelector('.filter-group-icon');
 
-document.getElementById("cuisine-filter").addEventListener("click", function (e) {
-  this.classList.toggle("open");
+    if (dropdownIcon) {
+      const isOpen = filterTitle.nextElementSibling.style.display === "none";
+      filterTitle.nextElementSibling.style.display = isOpen ? "block" : "none";
+      dropdownIcon.textContent = isOpen ? "v" : "^";
+    }
+  });
+});
+
+const homeFeedContainer = document.querySelector("#home-feed-container");
+homeFeedContainer.addEventListener("click", (event) => {
+  const target = event.target;
+
+  if(target.closest(".home-feed-item")) {
+    window.location.href = "/screen/restaurant_details_screen.html";
+  }
 });
