@@ -1,16 +1,20 @@
-import { restaurants } from '../../data/data_structure.js';
+import { restaurants } from '../../../data/data_structure.js';
 
 // Load restaurant details based on the selected restaurant ID
 function loadSelectedRestaurant() {
-  const selectedRestaurantId = localStorage.getItem("selectedRestaurantId");
-  console.log(selectedRestaurantId);
-  if (!selectedRestaurantId) {
+  const pathname = window.location.pathname;
+  const pathParts = pathname.split("/");
+
+  const restaurantId = pathParts[2];
+  console.log(restaurantId)
+
+  if (!restaurantId) {
     console.error("No selected restaurant ID found in localStorage.");
     return;
   }
 
   // Find the restaurant by ID
-  const restaurant = restaurants.find(rest => rest.id == selectedRestaurantId);
+  const restaurant = restaurants.find(rest => rest.id == restaurantId);
   if (!restaurant) {
     console.error("Restaurant not found.");
     return;

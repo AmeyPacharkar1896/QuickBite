@@ -7,8 +7,8 @@ function initializeNavigationLogic() {
           <div id="logo-name"></div>
         </div>
         <div id="user-space">
-          <div>Sign Up</div>
-          <div>Sign In</div>
+          <div class="registration">Sign Up</div>
+          <div class="registration">Sign In</div>
         </div>
       </div>
     `;

@@ -144,7 +144,7 @@ nav {
 #logo-name {
   width: 80px;
   height: 40px;
-  background-image: url('/util/images/logo_image.png');
+  background-image: url('/images/logo_image.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -214,7 +214,7 @@ nav {
   display: block;
   width: 30px;
   height: 30px;
-  background-image: url('./util/images/menu.png');
+  background-image: url('/images/menu.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -387,6 +387,7 @@ nav {
 }
 
 #info-container {
+  margin-top: 55px;
   padding: 15px;
   background-color: #FFFFFF;
 }

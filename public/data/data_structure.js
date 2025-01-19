@@ -2,6 +2,7 @@ const restaurants = [
   {
     id: "R123456",
     name: "The Bombay Curry House",
+    urlName: "The_Bombay_Curry_House", // new key with underscores instead of spaces
     location: {
       address: "45 Spice Avenue",
       city: "Mumbai",
@@ -55,6 +56,7 @@ const restaurants = [
   {
     id: "R654321",
     name: "The South Indian Cafe",
+    urlName: "The_South_Indian_Cafe", // new key with underscores instead of spaces
     location: {
       address: "78 Coconut Road",
       city: "Chennai",
