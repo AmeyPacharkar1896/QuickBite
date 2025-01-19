@@ -1,5 +1,85 @@
 /* Main Styles for Mobile Devices */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -12,13 +92,16 @@ body {
   line-height: 1.6;
   font-family: 'Arial', sans-serif;
   height: 2000px;
-  background-color: #f4f4f9; /* Light background for a professional look */
-  color: #333; /* Dark text color for better readability */
+  background-color: #f4f4f9;
+  /* Light background for a professional look */
+  color: #333;
+  /* Dark text color for better readability */
 }
 
 a {
   text-decoration: none;
-  color: inherit; /* Prevent link color override */
+  color: inherit;
+  /* Prevent link color override */
 }
 
 #pincode-search-button {
@@ -37,7 +120,8 @@ a {
 }
 
 #pincode-search-button:hover {
-  background-color: #009e92; /* Slight hover effect for interaction */
+  background-color: #009e92;
+  /* Slight hover effect for interaction */
 }
 
 nav {
@@ -50,7 +134,8 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #FFFFFF; /* White background */
+  background-color: #FFFFFF;
+  /* White background */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 100;
   padding: 12px 20px;
@@ -73,7 +158,7 @@ nav {
   align-items: center;
 }
 
-#first-half > div {
+#first-half>div {
   display: flex;
 }
 
@@ -83,19 +168,23 @@ nav {
 }
 
 #restaurant-searchbar {
-  width: 90%; /* Full-width for mobile */
+  width: 90%;
+  /* Full-width for mobile */
   height: 40px;
-  border: 1px solid #FF8C00; /* Vibrant orange border */
+  border: 1px solid #FF8C00;
+  /* Vibrant orange border */
   font-size: 16px;
   padding-left: 24px;
   border-radius: 6px;
   margin-bottom: 10px;
-  background-color: #FFF; /* White background */
+  background-color: #FFF;
+  /* White background */
   transition: border-color 0.3s ease;
 }
 
 #restaurant-searchbar:focus {
-  border-color: #FF69B4; /* Vibrant pink on focus */
+  border-color: #FF69B4;
+  /* Vibrant pink on focus */
 }
 
 #user-space {
@@ -115,8 +204,10 @@ nav {
 }
 
 #user-space div:hover {
-  background-color: #FF8C00; /* Orange background on hover */
-  transform: scale(1.05); /* Slight hover effect */
+  background-color: #FF8C00;
+  /* Orange background on hover */
+  transform: scale(1.05);
+  /* Slight hover effect */
 }
 
 #menu-icon {
@@ -132,15 +223,22 @@ nav {
 
 #side-filter-bar {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: -300px;
   width: 220px;
-  height: 100%;
+  height: 84%;
   background-color: #FFFFFF;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: left 0.3s ease;
   z-index: 200;
+  overflow-y: auto;
+}
+
+#side-filter-bar>h3 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 #side-filter-bar.show {
@@ -151,12 +249,18 @@ nav {
   margin-bottom: 25px;
 }
 
-.filter-group label {
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  color: #FF8C00; /* Vibrant orange for labels */
+.filter-group>h4 {
   margin-bottom: 10px;
+}
+
+.filter-group label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FF8C00;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(207, 203, 203, 0.956);
 }
 
 .filter-group select,
@@ -166,21 +270,25 @@ nav {
   margin: 5px 0;
   padding: 10px;
   border-radius: 6px;
-  border: 1px solid #FF8C00; /* Vibrant orange border */
-  background-color: #FFF; /* White background */
+  border: 1px solid #FF8C00;
+  /* Vibrant orange border */
+  background-color: #FFF;
+  /* White background */
   transition: border-color 0.3s ease;
 }
 
 .filter-group select:focus,
 .filter-group input[type="radio"]:focus,
 .filter-group input[type="range"]:focus {
-  border-color: #FF69B4; /* Vibrant pink focus effect */
+  border-color: #FF69B4;
+  /* Vibrant pink focus effect */
 }
 
 #apply-filters {
   width: 100%;
   padding: 14px;
-  background-color: #FF6347; /* Vibrant red */
+  background-color: #FF6347;
+  /* Vibrant red */
   color: white;
   border: none;
   border-radius: 8px;
@@ -192,7 +300,8 @@ nav {
 }
 
 #apply-filters:hover {
-  background-color: #FF8C00; /* Vibrant orange on hover */
+  background-color: #FF8C00;
+  /* Vibrant orange on hover */
 }
 
 #home-feed-container {
@@ -200,16 +309,23 @@ nav {
   padding: 20px;
   background-color: #fff;
   display: grid;
-  grid-template-columns: 1fr; /* Single column layout for mobile */
+  grid-template-columns: 1fr;
+  /* Single column layout for mobile */
   gap: 20px;
 }
 
 .home-feed-item {
+  width: 240px;
+  /* height: 80%; */
+  aspect-ratio: 16/9;
+  /* word-break: break-all; */
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
-  padding: 20px;
-  border: 1px solid #FF8C00; /* Vibrant orange border */
+  padding: 10px;
+  border: 1px solid #FF8C00;
+  /* Vibrant orange border */
   border-radius: 12px;
   background-color: #fff;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -221,11 +337,19 @@ nav {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+.home-feed-item > .restaurant-id {
+  display: none;
+}
+
 .home-feed-item img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 12px;
+}
+
+#restaurant-id {
+  display: none;
 }
 
 #info-section {
@@ -243,18 +367,18 @@ nav {
 #restaurant_name {
   font-size: 24px;
   font-weight: bold;
-  color: #FF69B4; /* Vibrant pink for restaurant name */
+  color: #FF69B4;
 }
 
 #rating {
   font-size: 18px;
-  color: #FF8C00; /* Vibrant orange for rating */
+  color: #FF8C00;
 }
 
 #delivery-price {
   font-size: 20px;
   font-weight: bold;
-  color: #FF8C00; /* Vibrant orange for price */
+  color: #FF8C00;
 }
 
 .action-buttons {
@@ -264,7 +388,7 @@ nav {
 
 #info-container {
   padding: 15px;
-  background-color: #FFFFFF; /* White background for neutrality */
+  background-color: #FFFFFF;
 }
 
 #restaurant-img img {
@@ -275,16 +399,17 @@ nav {
 }
 
 #restaurant-name {
-  font-size: 26px; /* Larger font for mobile readability */
+  font-size: 26px;
   font-weight: bold;
   margin: 10px 0;
-  color: #FF69B4; /* Vibrant pink for restaurant name */
+  color: #FF69B4;
 }
 
 #delivery-time,
 #tags {
   font-size: 18px;
-  color: #666666; /* Neutral gray for delivery and tags */
+  color: #666666;
+  /* Neutral gray for delivery and tags */
 }
 
 #restaurant-info {
@@ -293,7 +418,8 @@ nav {
 
 #restaurant-info span {
   font-size: 18px;
-  color: #333333; /* Dark text for readability */
+  color: #333333;
+  /* Dark text for readability */
 }
 
 #reviews {
@@ -302,7 +428,8 @@ nav {
   align-items: center;
   margin: 10px 0;
   font-weight: bolder;
-  color: #FF8C00; /* Bold orange for reviews */
+  color: #FF8C00;
+  /* Bold orange for reviews */
 }
 
 #reviews span {
@@ -317,7 +444,8 @@ nav {
 #review-stars {
   margin-left: 5px;
   font-size: 18px;
-  color: #FF8C00; /* Orange for stars */
+  color: #FF8C00;
+  /* Orange for stars */
 }
 
 #menu-filters {
@@ -325,9 +453,11 @@ nav {
 }
 
 #menu-item-containers h2 {
-  font-size: 22px; /* Slightly larger font for section titles */
+  font-size: 22px;
+  /* Slightly larger font for section titles */
   margin-bottom: 15px;
-  color: #F7DC6F; /* Bright yellow for section titles */
+  color: #F7DC6F;
+  /* Bright yellow for section titles */
 }
 
 .menu-item {
@@ -335,7 +465,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 10px 15px;
-  background-color: #FFF; /* White background for menu items */
+  background-color: #FFF;
+  /* White background for menu items */
   border-radius: 10px;
   margin-bottom: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -346,10 +477,12 @@ nav {
 }
 
 .item-name {
-  font-size: 18px; /* Increased for better readability */
+  font-size: 18px;
+  /* Increased for better readability */
   font-weight: bold;
   margin-bottom: 5px;
-  color: #FF69B4; /* Vibrant pink for item names */
+  color: #FF69B4;
+  /* Vibrant pink for item names */
 }
 
 .ingredients {
@@ -359,9 +492,11 @@ nav {
 }
 
 .price {
-  font-size: 18px; /* Increased size for better visibility */
+  font-size: 18px;
+  /* Increased size for better visibility */
   font-weight: bold;
-  color: #FF8C00; /* Bright orange for price */
+  color: #FF8C00;
+  /* Bright orange for price */
 }
 
 .item-image img {
@@ -381,8 +516,10 @@ nav {
 
 .action .add-item,
 .action .remove-item {
-  font-size: 28px; /* Larger icons for better mobile interaction */
-  color: #FF69B4; /* Vibrant pink for action icons */
+  font-size: 28px;
+  /* Larger icons for better mobile interaction */
+  color: #FF69B4;
+  /* Vibrant pink for action icons */
   cursor: pointer;
   margin: 0 10px;
 }
@@ -421,23 +558,27 @@ nav {
 
 #quantity {
   margin-left: 10px;
-  font-size: 20px; /* Larger quantity font for better readability */
+  font-size: 20px;
+  /* Larger quantity font for better readability */
 }
 
 #submit-button {
-  background-color: #FF8C00; /* Orange for the button */
+  background-color: #FF8C00;
+  /* Orange for the button */
   color: white;
   padding: 12px 24px;
   border: none;
   cursor: pointer;
   margin-top: 20px;
   border-radius: 8px;
-  font-size: 18px; /* Adjusted button font for mobile */
+  font-size: 18px;
+  /* Adjusted button font for mobile */
   font-weight: bold;
 }
 
 #submit-button:hover {
-  background-color: #FF69B4; /* Change to vibrant pink on hover */
+  background-color: #FF69B4;
+  /* Change to vibrant pink on hover */
 }
 
 /* Media Query for Larger Screens */
@@ -448,7 +589,8 @@ nav {
   }
 
   #restaurant-searchbar {
-    width: 50%; /* Adjusted search bar width for larger screens */
+    width: 50%;
+    /* Adjusted search bar width for larger screens */
   }
 
   #home-feed-container {
@@ -461,9 +603,10 @@ nav {
   }
 
   .menu-item .item-name {
-    font-size: 20px; /* Larger font for better readability */
+    font-size: 20px;
+    /* Larger font for better readability */
   }
-  
+
   #submit-button {
     font-size: 20px;
     padding: 14px 28px;

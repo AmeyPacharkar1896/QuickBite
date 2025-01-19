@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <nav>
+  <!-- <nav>
     <div id="first-half">
       <div>
         <div id="menu-icon"></div>
@@ -23,41 +23,11 @@
     <div id="search-bar">
       <input type="search" name="restaurant-searchbar" id="restaurant-searchbar" placeholder="Search Restaurant" />
     </div>
-  </nav>
+  </nav> -->
+  <nav id="navigation-bar"></nav>
 
   <!-- each restaurant data -->
-  <div id="home-feed-container">
-    <div class="home-feed-item">
-      <img src="https://wallpapers.com/images/hd/brand-pictures-g2x50ziu0hdq1fbu.jpg" alt="pizza-hut">
-      <div id="info-section">
-        <div class="restaurant-details">
-          <div id="restaurant_name">Pizza Hut</div>
-          <div id="rating">4.5 <span>⭐</span></div>
-        </div>
-        <div id="delivery-price">₹100</div>
-      </div>
-    </div>
-    <div class="home-feed-item">
-      <img src="https://wallpapers.com/images/hd/brand-pictures-g2x50ziu0hdq1fbu.jpg" alt="pizza-hut">
-      <div id="info-section">
-        <div class="restaurant-details">
-          <div id="restaurant_name">Pizza Hut</div>
-          <div id="rating">4.5 <span>⭐</span></div>
-        </div>
-        <div id="delivery-price">₹100</div>
-      </div>
-    </div>
-    <div class="home-feed-item">
-      <img src="https://wallpapers.com/images/hd/brand-pictures-g2x50ziu0hdq1fbu.jpg" alt="pizza-hut">
-      <div id="info-section">
-        <div class="restaurant-details">
-          <div id="restaurant_name">Pizza Hut</div>
-          <div id="rating">4.5 <span>⭐</span></div>
-        </div>
-        <div id="delivery-price">₹100</div>
-      </div>
-    </div>
-  </div>
+  <div id="home-feed-container"></div>
 
   <!-- side filter bar -->
   <div id="side-filter-bar">
@@ -66,11 +36,11 @@
     <!-- Cuisine Filters -->
     <div id="cuisine-filters" class="filter-group">
       <h4>Choose Cuisine</h4>
-      <label>Italian<input type="checkbox" value="Italian"> </label>
-      <label>Chinese<input type="checkbox" value="Chinese"> </label>
-      <label>Indian<input type="checkbox" value="Indian"> </label>
-      <label>Mexican<input type="checkbox" value="Mexican"> </label>
-      <label>French<input type="checkbox" value="French"> </label>
+      <label><span>Indian</span><input type="checkbox" value="Indian"></label>
+      <label><span>Italian</span><input type="checkbox" value="Italian"></label>
+      <label><span>Chinese</span><input type="checkbox" value="Chinese"></label>
+      <label><span>Mexican</span><input type="checkbox" value="Mexican"></label>
+      <label><span>French</span><input type="checkbox" value="French"></label>
     </div>
 
     <!-- Price Range Filters -->
@@ -91,7 +61,7 @@
     <button id="apply-filters">Apply Filters</button>
   </div>
 
-  <script src="/logic/restaurant_list_logic.js"></script>
+  <script src="/logic/restaurant_list_logic/restaurant_list_logic.js" type="module"></script>
 </body>
 
 </html>
