@@ -33,5 +33,3 @@ dist-ssr
 .env.staging.test
 .env.staging.production
 .env.development.local
-
-pages
