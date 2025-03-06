@@ -24,12 +24,5 @@ dist-ssr
 *.sw?
 .env
 .env.local
-.env.development
-.env.test
-.env.production
-.env.staging
-.env.local.staging
-.env.staging.development
-.env.staging.test
-.env.staging.production
-.env.development.local
+
+package-lock.json
