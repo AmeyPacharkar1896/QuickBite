@@ -34,7 +34,4 @@ dist-ssr
 .env.staging.production
 .env.development.local
 
-
-components
 pages
-
