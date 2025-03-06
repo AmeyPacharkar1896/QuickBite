@@ -37,11 +37,4 @@ dist-ssr
 
 components
 pages
-services
-utils
-types
-interfaces
-models
-schemas
-constants
-config
+
